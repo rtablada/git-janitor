@@ -14,5 +14,8 @@
   "dependencies": {
     "esm": "^3.2.25",
     "yargs": "^14.2.0"
+  },
+  "bin": {
+    "git-janitor": "index.js"
   }
 }
