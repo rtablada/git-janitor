@@ -5,6 +5,9 @@
   "main": "index.js",
   "author": "Ryan Tablada <ryan.tablada@gmail.com>",
   "license": "MIT",
+  "repository": {
+    "url": "https://github.com/rtablada/git-janitor.git"
+  },
   "devDependencies": {
     "eslint": "^6.5.1",
     "eslint-config-prettier": "^6.4.0",
