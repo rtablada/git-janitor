@@ -1,6 +1,6 @@
 {
   "name": "git-janitor",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A series of scripts to help keep your git repo clean",
   "main": "index.js",
   "author": "Ryan Tablada <ryan.tablada@gmail.com>",
