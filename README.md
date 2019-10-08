@@ -4,7 +4,7 @@ This is a simple script to clean up your git repos.
 
 This tool specifically started as a way to clean up merged branches in projects which heavily rely on rebase or squash merges where simpler git scripts may not remove old stale branches.
 
-## usage
+## Usage
 
 Install this package as a global package using NPM or Yarn:
 
@@ -19,17 +19,7 @@ Then run the Git Janitor command in your git repo
 git-janitor
 ```
 
-If you would like to see what branches would be deleted or pruned by the janitor add the arg `--dry-run`:
-
-```
-git-janitor --dry-run
-```
-
-By default Git Janitor checks to see if branches have been merged into `master`, if you use a different main branch use the `--default-branch` arg:
-
-```
-git-janitor --default-branch=develop
-```
+The prompt will then lead you through asking what branch you use for your main branch (where things get merged to), what sources you want to remove merged branches from (currently supports local branches and remotes), how many weeks you want to keep of merged branches (in case you don't want to quite clean everything), and if you want to run a dry run (to see what `git-janitor` would delete).
 
 ## Why
 
