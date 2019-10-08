@@ -5,6 +5,10 @@
   "main": "index.js",
   "author": "Ryan Tablada <ryan.tablada@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "lint": "eslint lib",
+    "lint:fix": "npm lint --fix"
+  },
   "repository": {
     "url": "https://github.com/rtablada/git-janitor.git"
   },
@@ -16,6 +20,8 @@
   },
   "dependencies": {
     "esm": "^3.2.25",
+    "inquirer": "^7.0.0",
+    "moment": "^2.24.0",
     "yargs": "^14.2.0"
   },
   "bin": {
