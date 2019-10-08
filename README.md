@@ -13,13 +13,13 @@ yarn global add git-janitor
 npm install -g git-janitor
 ```
 
-Then run the Git Janitor command in your git repo
+Then run the Git Janitor command in your git repo:
 
 ```
 git-janitor
 ```
 
-The prompt will then lead you through asking what branch you use for your main branch (where things get merged to), what sources you want to remove merged branches from (currently supports local branches and remotes), how many weeks you want to keep of merged branches (in case you don't want to quite clean everything), and if you want to run a dry run (to see what `git-janitor` would delete).
+The prompt will then lead you through asking what branch you use for your main branch (where things get merged to), what sources you want to remove merged branches from (currently supports local branches and remotes), how many weeks you want to keep of merged branches (in case you don't want to quite clean everything), and how to run the clean up (dry run, interactive [ask to delete each branch], quiet [deletes without asking]).
 
 ## Why
 
