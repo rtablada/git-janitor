@@ -7,7 +7,13 @@ async function main() {
   const argv = yargs.argv;
   let remoteNames = await getRemoteNames();
 
-  let { compareSources, defaultBranchName, dryRun } = await inquirer.prompt([
+  let { compareSources, defaultBranchName, dryRun, weeksBack } = await inquirer.prompt([
+    {
+      type: 'input',
+      message: 'What branch are features merged into?',
+      name: 'defaultBranchName',
+      default: argv.defaultBranch || process.DEFAULT_BRANCH_NAME || 'master',
+    },
     {
       type: 'checkbox',
       message: 'What sources do you want to clean?',
@@ -18,10 +24,10 @@ async function main() {
       ],
     },
     {
-      type: 'input',
-      message: 'What branch are features merged into?',
-      name: 'defaultBranchName',
-      default: argv.defaultBranch || process.DEFAULT_BRANCH_NAME || 'master',
+      type: 'number',
+      message: 'How many weeks of recent branches do you want to keep (0 to clean all merged branches).',
+      name: 'weeksBack',
+      default: 3,
     },
     {
       type: 'confirm',
@@ -31,7 +37,7 @@ async function main() {
     },
   ]);
 
-  cleanMergedBranches({ compareSources, defaultBranchName, dryRun });
+  cleanMergedBranches({ weeksBack, compareSources, defaultBranchName, dryRun });
 }
 
 main();
